@@ -1,0 +1,107 @@
+.ask-her-out-container {
+  width: 100%;
+  min-height: 80vh;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.5s ease;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/* Stage 0 (Index) Backgrounds */
+.ask-bg-stage-0 {
+  background-image: url('/ask-assets/bg.gif');
+  background-size: cover;
+  background-position: center;
+}
+.ask-bg-stage-0.hovered {
+  background-image: url('/ask-assets/wall6.gif');
+  background-size: auto;
+  background-position: 0%;
+}
+
+/* Stage 1 (Omigod) Text effects */
+.ask-bg-stage-1 {
+  background-color: #190116;
+}
+.chori-text {
+  font-size: 2.5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  opacity: 0;
+  animation: fadeInOut 4s infinite;
+}
+.beauti { color: yellow; text-shadow: 0 0 50px red; }
+.gorg { color: orange; text-shadow: 0 0 50px red; animation-delay: 1s; }
+.wow { color: rgb(248, 87, 101); text-shadow: 0 0 50px red; animation-delay: 2s; }
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Stage 2 (Yes/No) Backgrounds */
+.ask-bg-stage-2 {
+  background-color: #110515;
+}
+.ask-bg-stage-2.hovered {
+  background-image: linear-gradient(0.25turn, #100716, #0e031f, #031d17, #250212, #181802);
+}
+.btn-yes {
+  background-color: rgb(237, 16, 64);
+  color: white;
+  border: none;
+  font-family: inherit;
+  font-size: 1.5rem;
+  border-radius: 1rem 3rem 2rem 4rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.btn-no {
+  background-color: rgb(245, 116, 142);
+  color: white;
+  border: none;
+  font-family: inherit;
+  font-size: 1.5rem;
+  border-radius: 4rem 2rem 3rem 1rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Stage 3 (Success) */
+.ask-bg-stage-3 {
+  background-color: rgb(24, 22, 22);
+}
+
+/* Magic Circles (from no3.css) */
+.magic-circle {
+  position: absolute;
+  bottom: 0;
+  width: 20px;
+  height: 20px;
+  background: rgb(249, 206, 247);
+  box-shadow: 0 0 10px rgb(230,0,255), 0 0 20px rgb(218,27,221), 0 0 30px rgb(216,34,244);
+  border-radius: 30%;
+  animation: flyUp 5s linear forwards;
+  pointer-events: none;
+}
+@keyframes flyUp {
+  0% { transform: translateY(0) rotate(-25deg); opacity: 1; }
+  100% { transform: translateY(-100vh) rotate(25deg); opacity: 0; }
+}
+
+.ask-btn-text {
+  transition: all 0.3s ease;
+}
+.ask-btn-hover-text {
+  display: none;
+}
+.btn-hover-reveal:hover .ask-btn-text {
+  display: none;
+}
+.btn-hover-reveal:hover .ask-btn-hover-text {
+  display: inline;
+}
