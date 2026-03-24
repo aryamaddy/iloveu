@@ -38,9 +38,9 @@ const IntroScreen: React.FC<IntroScreenProps> = ({ onEnter }) => {
       {/* Intro Content */}
       <div className="intro-content">
         <h1 className="intro-title">
-          Something Special
+          Hello Cutie
           <br />
-          <span className="intro-subtitle">Awaits You</span>
+          <span className="intro-subtitle">There is something special for you</span>
         </h1>
         
         <button 

@@ -9,11 +9,10 @@ const SurpriseModal: React.FC<SurpriseModalProps> = ({ isOpen, onClose }) => {
   const [sparkles, setSparkles] = useState<
     Array<{ id: number; x: number; y: number; delay: number }>
   >([]);
-  const [showLetter, setShowLetter] = useState(false);
+  const [showVideo, setShowVideo] = useState(false);
 
   useEffect(() => {
     if (isOpen) {
-      // Create sparkles
       const sparklesData = Array.from({ length: 20 }, (_, i) => ({
         id: i,
         x: Math.random() * 100,
@@ -22,10 +21,9 @@ const SurpriseModal: React.FC<SurpriseModalProps> = ({ isOpen, onClose }) => {
       }));
       setSparkles(sparklesData);
 
-      // Show letter after sparkles animation
-      setTimeout(() => setShowLetter(true), 1000);
+      setTimeout(() => setShowVideo(true), 1000);
     } else {
-      setShowLetter(false);
+      setShowVideo(false);
     }
   }, [isOpen]);
 
@@ -51,33 +49,23 @@ const SurpriseModal: React.FC<SurpriseModalProps> = ({ isOpen, onClose }) => {
           ))}
         </div>
 
-        {/* Handwritten Love Letter */}
-        <div className={`handwritten-letter ${showLetter ? "show" : ""}`}>
-          <div className="letter-paper">
+        {/* Video Player */}
+        <div className={`handwritten-letter ${showVideo ? "show" : ""}`}>
+          <div className="letter-paper" style={{ padding: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <div className="letter-header">
-              <h2 className="handwritten-title">My Dearest Love</h2>
+              <h2 className="handwritten-title">A Special Surprise For You 💕</h2>
             </div>
-            <div className="handwritten-content">
-              <p className="handwritten-line">
-                Every moment with you feels like magic...
-              </p>
-              <p className="handwritten-line">
-                You are the light that brightens my darkest days,
-              </p>
-              <p className="handwritten-line">
-                the melody that makes my heart sing,
-              </p>
-              <p className="handwritten-line">
-                and the dream I never want to wake up from.
-              </p>
-              <p className="handwritten-line">
-                I love you more than words can express.
-              </p>
-              <div className="handwritten-signature">
-                Forever yours,
-                <br />
-                <span className="signature-name">Your Love</span>
-              </div>
+            <div style={{ width: '100%', maxWidth: '500px', borderRadius: '12px', overflow: 'hidden', marginTop: '15px' }}>
+              <video
+                src="/video.mp4"
+                controls
+                autoPlay
+                style={{
+                  width: '100%',
+                  borderRadius: '12px',
+                  boxShadow: '0 4px 20px rgba(0,0,0,0.2)',
+                }}
+              />
             </div>
           </div>
         </div>

@@ -2,36 +2,36 @@ import React, { useState, useEffect } from 'react';
 
 const AnimatedImageGrid: React.FC = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  
+
   const images = [
     {
-      src: "https://images.unsplash.com/photo-1518621012118-696072aa579a?w=400&h=400&fit=crop",
-      caption: "You Made My Dreams Come True",
+      src: "/whatsapp1.jpeg",
+      caption: "Your eye that made me Blush",
       delay: 0
     },
     {
-      src: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=400&h=400&fit=crop",
-      caption: "Every Moment With You",
+      src: "/whatsapp2.jpeg",
+      caption: "The girl who made me believe in Love",
       delay: 0.2
     },
     {
-      src: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=400&h=400&fit=crop",
-      caption: "Forever In My Heart",
+      src: "/whatsapp3.jpeg",
+      caption: "The smile that made my day",
       delay: 0.4
     },
     {
-      src: "https://images.unsplash.com/photo-1516589091380-5d8e87df6999?w=400&h=400&fit=crop",
-      caption: "You Are My Everything",
+      src: "/whatsapp4.jpeg",
+      caption: "Every word from you matters",
       delay: 0.6
     },
     {
-      src: "https://images.unsplash.com/photo-1518197336700-b6e7d83b5b93?w=400&h=400&fit=crop",
-      caption: "Love Beyond Words",
+      src: "/whatsapp5.jpeg",
+      caption: "Moments I'll never forget",
       delay: 0.8
     },
     {
-      src: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=400&h=400&fit=crop",
-      caption: "Beautiful Like You",
+      src: "/whatsapp6.jpeg",
+      caption: "You make everything better",
       delay: 1.0
     }
   ];
@@ -107,7 +107,7 @@ const AnimatedImageGrid: React.FC = () => {
 
       <div className="grid-message">
         <p className="romantic-message">
-          Every picture tells our story, every moment is a treasure 💕
+          Every picture tells your story, every moment is a treasure 💕
         </p>
       </div>
     </div>
