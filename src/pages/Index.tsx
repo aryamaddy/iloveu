@@ -11,6 +11,7 @@ import SurpriseModal from '../components/SurpriseModal';
 import FlowerPetals from '../components/FlowerPetals';
 import SweetQuotes from '../components/SweetQuotes';
 import AnimatedImageGrid from '../components/AnimatedImageGrid';
+import AskHerOut from '../components/AskHerOut';
 
 const Index = () => {
   const [showIntro, setShowIntro] = useState(true);
@@ -130,6 +131,9 @@ const Index = () => {
 
       {/* Surprise Modal */}
       <SurpriseModal isOpen={showModal} onClose={() => setShowModal(false)} />
+
+      {/* Ask Her Out Section */}
+      <AskHerOut />
 
       {/* Audio element for background music */}
       <audio loop>
